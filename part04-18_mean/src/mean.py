@@ -1,0 +1,12 @@
+def mean(my_list : list):
+    if len(my_list) == 0:
+        return 0.0
+    
+    total = sum(my_list)
+    length = len(my_list)
+    return total/length
+# You can test your function by calling it within the following block
+if __name__ == "__main__":
+    my_list = [3, 6, -4]
+    result = mean(my_list)
+    print(result)

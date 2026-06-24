@@ -1,0 +1,38 @@
+def print_sudoku(sudoku: list):
+    for i in range(9):
+        for j in range(9):
+            if sudoku[i][j] == 0:
+                sudoku[i][j] = "_"
+            print(sudoku[i][j], end=" ")
+            if j == 2 or j == 5:
+                print(" ", end ="")
+        print()
+        if i == 2 or i == 5:
+            print()
+
+
+def add_number(sudoku: list, row_no: int, column_no: int, number: int):
+    sudoku[row_no][column_no] = number
+    return sudoku
+
+if __name__ == "__main__":
+    sudoku  = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    ]
+    if __name__ == "__main__":
+        print_sudoku(sudoku)
+        add_number(sudoku, 0, 0, 2)
+        add_number(sudoku, 1, 2, 7)
+        add_number(sudoku, 5, 7, 3)
+        print()
+        print("Three numbers added:")
+        print()
+        print_sudoku(sudoku)
